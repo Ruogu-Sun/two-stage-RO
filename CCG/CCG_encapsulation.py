@@ -4,8 +4,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 """ The input parameter """
-facility_num = 30
-customer_num = 30
+facility_num = 70
+customer_num = 70
 
 def fixed_cost(m):return np.random.randint(100, 500, size=m)
 # fixed_cost = [400, 414, 326]
