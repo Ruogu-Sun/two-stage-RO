@@ -415,9 +415,9 @@ while (UB - LB )/UB> eps and iter_cnt <= max_iter:
         print(f'UB (iter {iter_cnt}): {UB}')
         Gap = round(100 * (UB - LB) / UB, 2)
         print(f'---- Gap: {Gap} % ---- ')
-    for j in range(customer_num):
-        print(f'\t actual demand: {d[j].varName}: {d[j].x}', end='')
-        print(f'\t perturbation in worst case: {g[j].varName}: {g[j].x}')
+    # for j in range(customer_num):
+    #     print(f'\t actual demand: {d[j].varName}: {d[j].x}', end='')
+    #     print(f'\t perturbation in worst case: {g[j].varName}: {g[j].x}')
     lb.append(LB)
     ub.append(UB)
     kk.append(iter_cnt)
@@ -430,9 +430,9 @@ print(f' ** Final Gap: {Gap} % ** ')
 print('\n** Solution ** ')
 for i in range(facility_num):
     print(f' {y[i].varName}: {y[i].x},\t{z[i].varName}: {z[i].x} ', end='')
-for j in range(customer_num):
-    print(f'\t actual demand: {d[j].varName}: {d[j].x}', end='')
-    print(f'\t perturbation in worst case: {g[j].varName}: {g[j].x}')
+# for j in range(customer_num):
+#     print(f'\t actual demand: {d[j].varName}: {d[j].x}', end='')
+#     print(f'\t perturbation in worst case: {g[j].varName}: {g[j].x}')
 print('\n** Transportation solution ** ')
 for i in range(facility_num):
     for j in range(customer_num):
